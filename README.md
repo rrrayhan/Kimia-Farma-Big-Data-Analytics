@@ -26,6 +26,12 @@ Dataset yang disediakan terdiri dari tabel-tabel berikut: <br>
 -  kf_kantor_cabang.csv
 -  kf_product.csv
 <br>
+Untuk tabel tinggal hanya upload ke BigQuery untuk setiap keempat data seperti ketentuan berikut:<br>
+<br>
+<p align="center">
+    <kbd> <img width="1000" alt="sample table base" src="https://raw.githubusercontent.com/rrrayhan/dokumentasi_kimia_farma/main/import_table.png"> </kbd> <br>
+    Gambar 1 — Import Data ke BigQuery
+</p>
 
 ---
 
@@ -102,7 +108,7 @@ ALTER TABLE base_table ADD PRIMARY KEY(id_invoice);
 
 <p align="center">
     <kbd> <img width="1000" alt="sample table base" src="https://raw.githubusercontent.com/rrrayhan/dokumentasi_kimia_farma/main/tabel%20analisa.png"> </kbd> <br>
-    Gambar 1 — Sampel Hasil Pembuatan Tabel Analisa 
+    Gambar 2 — Sampel Hasil Pembuatan Tabel Analisa 
 </p>
 <br>
 
@@ -126,6 +132,6 @@ Dashboard ini anda buat berdasarkan tabel analisa yang telah anda buat sebelumny
 
 <p align="center">
     <kbd> <img width="1000" alt="Kimia_Farma_page-0001" src="https://raw.githubusercontent.com/rrrayhan/dokumentasi_kimia_farma/main/dashboard.png?token=GHSAT0AAAAAACOUHLM4RM5SOUZ2U24F54S6ZOZPJZQ"> </kbd> <br>
-    Gambar 2 — Performance Analytics Kimia Farma 2020-2023
+    Gambar 3 — Performance Analytics Kimia Farma 2020-2023
 </p>
 <br>
