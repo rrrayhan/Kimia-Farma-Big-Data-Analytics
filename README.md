@@ -16,8 +16,11 @@ Big Data Analytics Kimia Farma merupakan virtual internship experience yang difa
 - Membuat visualisasi/dashboard Performance Analytics Kimia Farma 2020-2023
 <br>
 
-**Dataset** <br>
-Dataset yang disediakan terdiri dari tabel-tabel berikut:
+---
+
+## 📂 **Importing Dataset to BigQuery**
+### Dataset
+Dataset yang disediakan terdiri dari tabel-tabel berikut: <br>
 -  kf_final_transaction.csv 
 -  kf_inventory.csv  
 -  kf_kantor_cabang.csv
@@ -26,10 +29,32 @@ Dataset yang disediakan terdiri dari tabel-tabel berikut:
 
 ---
 
-
 ## 📂 **Design Datamart**
 ### Tabel Aggregat
-Tabel agregat adalah tabel yang dibuat dengan mengumpulkan dan menghitung data dari tabel basis. Tabel aggregat ini berisi informasi yang lebih ringkas dan digunakan untuk menganalisis data lebih cepat dan efisien. Hasil tabel ini akan digunakan untuk sumber pembuatan dashboard laporan penjualan.
+Tabel agregat adalah tabel yang dibuat dengan mengumpulkan dan menghitung data dari tabel basis. Tabel aggregat ini berisi informasi yang lebih ringkas dan digunakan untuk menganalisis data lebih cepat dan efisien. Hasil tabel ini akan digunakan untuk sumber pembuatan dashboard laporan penjualan. Berikut ini adalah kolom-kolom yang mandatory pada tabel tersebut: <br>
+
+● transaction_id : kode id transaksi<br>
+● date : tanggal transaksi dilakukan<br>
+● branch_id : kode id cabang Kimia Farma<br>
+● branch_name : nama cabang Kimia Farma<br>
+● kota : kota cabang Kimia Farma<br>
+● provinsi : provinsi cabang Kimia Farma<br>
+● rating_cabang : penilaian konsumen terhadap cabang Kimia Farma <br>
+● customer_name : Nama customer yang melakukan transaksi<br>
+● product_id : kode product obat<br>
+● product_name : nama obat<br>
+● actual_price : harga obat<br>
+● discount_percentage : Persentase diskon yang diberikan pada obat<br>
+● persentase_gross_laba : Persentase laba yang seharusnya diterima dari obat dengan ketentuan berikut: <br>
+Harga <= Rp 50.000 -> laba 10%<br>
+Harga > Rp 50.000 - 100.000 -> laba 15% <br>
+Harga > Rp 100.000 - 300.000 -> laba 20% <br>
+Harga > Rp 300.000 - 500.000 -> laba 25% <br>
+Harga > Rp 500.000 -> laba 30%<br>
+● nett_sales : harga setelah diskon<br>
+● nett_profit : keuntungan yang diperoleh Kimia Farma<br>
+● rating_transaksi : penilaian konsumen terhadap transaksi yang dilakukan<br>
+
 <details>
   <summary> Klik untuk melihat Query </summary>
     <br>
@@ -81,7 +106,7 @@ ALTER TABLE base_table ADD PRIMARY KEY(id_invoice);
 <br>
 
 <p align="center">
-    <kbd> <img width="1000" alt="sample table base" src="https://user-images.githubusercontent.com/115857221/222876639-20e1e208-1c5b-4279-8e18-ec937c56f526.png"> </kbd> <br>
+    <kbd> <img width="1000" alt="sample table base" src="https://raw.githubusercontent.com/rrrayhan/dokumentasi_kimia_farma/main/tabel%20analisa.png?token=GHSAT0AAAAAACOUHLM4MGABA2MVT7T4EIH4ZOZPBBQ"> </kbd> <br>
     Gambar 1 — Sampel Hasil Pembuatan Tabel Base 
 </p>
 <br>
@@ -89,11 +114,23 @@ ALTER TABLE base_table ADD PRIMARY KEY(id_invoice);
 ---
 
 ## 📂 **Data Visualization**
+Dashboard ini anda buat berdasarkan tabel analisa yang telah anda buat sebelumnya pada BigQuery, sehingga anda perlu menghubungkan table tersebut ke Google Looker Studio. Anda dapat mendesain dashboard sesuai dengan kreativitas anda masing-masing, namun dashboardnya harus mencangkup:<br>
+
+● Judul Dashboard <br>
+● Summary Dashboard <br>
+● Filter Control <br>
+● Snapshot Data <br>
+● Perbandingan Pendapatan Kimia Farma dari tahun ke tahun <br>
+● Top 10 Total transaksi cabang provinsi <br>
+● Top 10 Nett sales cabang provinsi <br>
+● Top 5 Cabang Dengan Rating Tertinggi, namun Rating Transaksi Terendah <br>
+● Indonesia's Geo Map Untuk Total Profit Masing-masing Provinsi <br>
+● Dan analisis lainnya yang dapat anda eksplorasi.<br>
 
 [Lihat pada halaman Looker Data Studio](https://lookerstudio.google.com/reporting/28904f09-875c-4713-9c29-4baa9d4ab653).
 
 <p align="center">
-    <kbd> <img width="1000" alt="Kimia_Farma_page-0001" src="https://user-images.githubusercontent.com/115857221/222877035-53371a89-081d-4ec5-9e72-65b0176a96fd.jpg"> </kbd> <br>
-    Gambar 3 — Sales Report Dashboard PT. Kimia Farma
+    <kbd> <img width="1000" alt="Kimia_Farma_page-0001" src="https://raw.githubusercontent.com/rrrayhan/dokumentasi_kimia_farma/main/dashboard.png?token=GHSAT0AAAAAACOUHLM4RM5SOUZ2U24F54S6ZOZPJZQ"> </kbd> <br>
+    Gambar 2 — Performance Analytics Kimia Farma 2020-2023
 </p>
 <br>
