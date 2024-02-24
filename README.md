@@ -45,12 +45,7 @@ Tabel agregat adalah tabel yang dibuat dengan mengumpulkan dan menghitung data d
 ● product_name : nama obat<br>
 ● actual_price : harga obat<br>
 ● discount_percentage : Persentase diskon yang diberikan pada obat<br>
-● persentase_gross_laba : Persentase laba yang seharusnya diterima dari obat dengan ketentuan berikut: <br>
-Harga <= Rp 50.000 -> laba 10%<br>
-Harga > Rp 50.000 - 100.000 -> laba 15% <br>
-Harga > Rp 100.000 - 300.000 -> laba 20% <br>
-Harga > Rp 300.000 - 500.000 -> laba 25% <br>
-Harga > Rp 500.000 -> laba 30%<br>
+● persentase_gross_laba : Persentase laba yang seharusnya diterima dari obat <br>
 ● nett_sales : harga setelah diskon<br>
 ● nett_profit : keuntungan yang diperoleh Kimia Farma<br>
 ● rating_transaksi : penilaian konsumen terhadap transaksi yang dilakukan<br>
