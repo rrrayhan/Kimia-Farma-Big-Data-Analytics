@@ -101,8 +101,8 @@ ALTER TABLE base_table ADD PRIMARY KEY(id_invoice);
 <br>
 
 <p align="center">
-    <kbd> <img width="1000" alt="sample table base" src="https://raw.githubusercontent.com/rrrayhan/dokumentasi_kimia_farma/main/tabel%20analisa.png?token=GHSAT0AAAAAACOUHLM4MGABA2MVT7T4EIH4ZOZPBBQ"> </kbd> <br>
-    Gambar 1 — Sampel Hasil Pembuatan Tabel Base 
+    <kbd> <img width="1000" alt="sample table base" src="https://raw.githubusercontent.com/rrrayhan/dokumentasi_kimia_farma/main/tabel%20analisa.png"> </kbd> <br>
+    Gambar 1 — Sampel Hasil Pembuatan Tabel Analisa 
 </p>
 <br>
 
