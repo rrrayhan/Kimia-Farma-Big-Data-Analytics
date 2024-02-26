@@ -1,5 +1,5 @@
 # **Virtual Internship Experience: Big Data Analytics - Kimia Farma**
-Tool : Google BigQuery - [Lihat script](https://github.com/faizns/VIX-Big-Data-Analytics-Kimia-Farma/blob/a4da84f3d2fb45693599c279747cabf271cfd866/vix_kimia_farma_script.sql) <br>
+Tool : Google BigQuery - [Lihat script](tabel_analisa_sql_syntax.sql) <br>
 Visualization : Looker Data Studio - [Lihat dashboard](https://lookerstudio.google.com/reporting/28904f09-875c-4713-9c29-4baa9d4ab653) <br>
 Dataset : [Kimia Farma](https://www.rakamin.com/virtual-internship-experience/task/kimiafarma-big-data-analytics-virtual-internship-program/20405) 
 <br>
