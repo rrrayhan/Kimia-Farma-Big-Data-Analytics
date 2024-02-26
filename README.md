@@ -1,5 +1,5 @@
 # **Virtual Internship Experience: Big Data Analytics - Kimia Farma**
-Tool : Google BigQuery - [Lihat script](tabel_analisa_sql_syntax.sql) <br>
+Tool : Google BigQuery - [Lihat script](https://console.cloud.google.com/bigquery?sq=1028321426471:c73bbff873264aacbd8ae714b39b5e5b) <br> 
 Visualization : Looker Data Studio - [Lihat dashboard](https://lookerstudio.google.com/reporting/28904f09-875c-4713-9c29-4baa9d4ab653) <br>
 Dataset : [Kimia Farma](https://www.rakamin.com/virtual-internship-experience/task/kimiafarma-big-data-analytics-virtual-internship-program/20405) 
 <br>
@@ -56,15 +56,13 @@ Tabel agregat adalah tabel yang dibuat dengan mengumpulkan dan menghitung data d
 ● nett_profit : keuntungan yang diperoleh Kimia Farma<br>
 ● rating_transaksi : penilaian konsumen terhadap transaksi yang dilakukan<br>
 
-https://console.cloud.google.com/bigquery?sq=1028321426471:c73bbff873264aacbd8ae714b39b5e5b
-
 <details>
   <summary> Klik untuk melihat Query </summary>
     <br>
     
 ```sql
-CREATE TABLE kimia_farma.tabel_analisa AS
-SELECT
+CREATE TABLE kimia_farma.tabel_analisa AS -- Membuat tabel baru dengan nama tabel_analisa di dalam skema kimia_farma
+SELECT -- Memilih kolom-kolom yang akan dimasukkan ke dalam tabel
       kft.transaction_id,
       kft.date,
       kkc.branch_id,
@@ -77,15 +75,15 @@ SELECT
       kp.product_name,
       kp.price AS actual_price,
       kft.discount_percentage,
-      CASE
+      CASE --  Menggunakan syntax CASE untuk menentukan persentase laba kotor berdasarkan harga produk
           WHEN kp.price <= 50000 THEN 0.10
           WHEN kp.price BETWEEN 50000 AND 100000 THEN 0.15
           WHEN kp.price BETWEEN 100000 AND 300000 THEN 0.20
           WHEN kp.price BETWEEN 300000 AND 500000 THEN 0.25
           ELSE 0.30
       END AS persentase_gross_laba,
-      (kp.price * (1 - kft.discount_percentage / 100)) AS nett_sales,
-      (kp.price * (1 - kft.discount_percentage / 100) * 
+      (kp.price * (1 - kft.discount_percentage / 100)) AS nett_sales, -- Perhitungan untuk menentukan penjualan bersih (nett_sales)
+      (kp.price * (1 - kft.discount_percentage / 100) * -- Perhitungan untuk menentukan keuntungan bersih (nett_profit)
       CASE
           WHEN kp.price <= 50000 THEN 0.10
           WHEN kp.price BETWEEN 50000 AND 100000 THEN 0.15
@@ -94,9 +92,9 @@ SELECT
           ELSE 0.30
       END) AS nett_profit,
       kft.rating AS rating_transaksi
-FROM 
+FROM -- Perintah untuk menentukan tabel-tabel yang akan di-join
   kimia_farma.kf_final_transaction AS kft
-INNER JOIN
+INNER JOIN -- Perintah untuk menggabungkan (join) beberapa tabel berdasarkan kriteria tertentu
   kimia_farma.kf_kantor_cabang AS kkc ON kft.branch_id = kkc.branch_id
 INNER JOIN
   kimia_farma.kf_product AS kp ON kft.product_id = kp.product_id;
