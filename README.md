@@ -99,7 +99,6 @@ INNER JOIN
 INNER JOIN
   kimia_farma.kf_product AS kp ON kft.product_id = kp.product_id;
 
-ALTER TABLE base_table ADD PRIMARY KEY(id_invoice);
 ```
     
 <br>
