@@ -56,6 +56,8 @@ Tabel agregat adalah tabel yang dibuat dengan mengumpulkan dan menghitung data d
 ● nett_profit : keuntungan yang diperoleh Kimia Farma<br>
 ● rating_transaksi : penilaian konsumen terhadap transaksi yang dilakukan<br>
 
+https://console.cloud.google.com/bigquery?sq=1028321426471:c73bbff873264aacbd8ae714b39b5e5b
+
 <details>
   <summary> Klik untuk melihat Query </summary>
     <br>
